@@ -1,57 +1,121 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style-type: none;
-  }
-body {
-    background-color: #ffde59;
+/* --------------------------------------------------------------------------------  var */
+:root{
+  --main-bg-color: #ffde59;
+  --font-size: 1rem;
+  --navbar-bg-color: #441518;
+  --navbar-color: #ffffff;
 }
-/* ********************************************* HEAD ********************************************* */
-header {
+/* --------------------------------------------------------------------------------  Reset */
+* {
+  box-sizing:border-box; 
+  outline:none;
+  margin:0;
+  padding:0;
+}
+ul {
+  list-style:none;
+}
+
+/* --------------------------------------------------------------------------------  Basic style */
+body {
+  margin:0;
+  font-size:var(--font-size);
+  font-family: 'rubik', sans-serif;
+}
+.main-content {
+  padding:1rem;
+  background: var(--main-bg-color);
+}
+@font-face {
+    font-family: "chewy";
+    src: url(/police\ chewy/chewy.ttf);
+}
+/* --------------------------------------------------------------------------------  Navbar */
+.navbar {  
+  display:flex;
+  align-items:center; 
+  justify-content:space-between;   
+  padding:10px;
+  font-size:1.1rem;
+  background:var(--navbar-bg-color);
+  color:var(--navbar-color);
+}
+.navbar-logo {
+    font-family: 'Chewy', cursive;
+}
+.navbar-links { 
+  display:flex;  
+}
+.navbar-link { 
+  padding:0 10px;
+}
+.navbar-link > a { 
+  color:var(--navbar-color);
+  text-decoration:none;
+}
+.burger {
+  display:none;
+}
+
+
+
+/*  Medium device - Bonus */
+@media screen and (min-width:768px) {
+  .navbar-link > a::after {
+    display:block;
+    content:"";
+    width:0;
+    height:1px;
+    background:var(--navbar-color);
+    transition:width .4s;
+  }
+  .navbar-link:hover > a::after {
+    width:100%;
+  }
+}
+/* --------------------------------------------------------------------------------  Main Wall */
+.logo-wall{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.header-bar {
-    width: 100%;
-    height: 40px;
-    background-color: #441518;
-    text-align: center;
-}
-.header-bar span {
-    font-size: 12px;
-    color: #ffffff;
-    font-family: 'Rubik', sans-serif;
-    margin: 10px;
-}
-.menu {
-    display: flex;
-    justify-content: center;
-    font-family: 'Rubik', sans-serif;
-    background-color: #ffde59;
-    padding: 18px;
-    font-size: 14px;
-}
-.menu a {
-    padding: 5px;
-}
 .main-img {
     width: 100%;
-    height: auto;
 }
-.btn {
-    display: flex;
-    align-items: center;
-    background-color: rgb(85, 171, 104);
-    border-radius: 10px;
-    padding: 2px;
-    color: white;
-    margin-right: 10px;
-    font-family: 'Rubik', sans-serif;
+/* --------------------------------------------------------------------------------  Rotate Btn */
+.rotate-btn {
+  display:inline-block;
+  width:150px;
+  height: 30px;
+  text-align:center;
+  transform-style:preserve-3d;
+  cursor:pointer;
+  transition:all .3s ease;
+  font-family: 'arial'
 }
-/* ********************************************* MAIN ********************************************* */
-
-
-
+.rotate-btn .rotate-btn-face, .rotate-btn .rotate-btn-face-back {
+  position:absolute;
+  display:block;
+  border:1px solid #35495e;
+  transition:all .5s;
+  color:#35495e;
+  text-decoration:none;
+  width:150px;
+  height: 30px;
+  line-height:30px;
+  border-radius: 4px;
+}
+.rotate-btn .rotate-btn-face {
+  background-color: #ffde15;
+  transform:translateZ(15px);
+}
+.rotate-btn .rotate-btn-face-back {
+  background-color:#35495e;
+  color:#42b883;
+  border:1px solid #42b883;
+  transform:rotateX(-90deg) translateZ(15px);
+}
+.rotate-btn:hover {
+  transform:rotateX(90deg);
+}

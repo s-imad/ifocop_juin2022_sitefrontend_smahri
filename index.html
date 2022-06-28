@@ -7,6 +7,7 @@
     <meta
       description="Sweety cat Ice Cream votre adresse pour manger de delicieuse glace douce et onctueuse."
     />
+    <!--  fichier css -->
     <link rel="stylesheet" href="./css/style.css" />
     <!--  Font Rubik Light 300 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,50 +24,34 @@
     <title>Sweety cat Ice Cream</title>
   </head>
   <body>
-    <!-- ------------------------------ Header ------------------------------ -->
-    <header>
-      <div class="header-bar">
-        <span
-          >36 rue des Pinguins, 75001 PARIS | Ouvert de 10 heures à 23
-          heures</span
-        >
-      </div>
-      <div class="menu">
-        <div class="menu_a">
-          <a>La Sweety Glacerie</a>
-          <a>Nos parfums</a>
-          <a>Notre histoire</a>
-          <a>Notre qualité</a>
-        </div>
-      </div>
-      <div class="logo">
+    <!-- ---------------------------------------------------------------------  Header Bar -->
+    <nav class="navbar">
+      <div class="navbar-logo"><h1>SweetyCat IceCream</h1></div>
+      <ul class="navbar-links">
+        <li class="navbar-link first"><a href="#">La Sweety Glacerie</a></li>
+        <li class="navbar-link second"><a href="#">Nos parfums</a></li>
+        <li class="navbar-link third"><a href="#">Contact</a></li>
+      </ul>
+      <button class="burger">
+        <span class="bar"></span>
+      </button>
+    </nav>
+    <!-- ---------------------------------------------------------------------  Main -->
+    <main class="main-content">
+      <div class="logo-wall">
         <img
           class="main-img"
           src="./img/sweetyCat.png"
           alt="sweety cat theme"
         />
-      </div>
-      <div>
-        <button class="btn">
+        <!-- <button class="btn">
           <p>Decouvrez notre univers</p>
-        </button>
+        </button> -->
+        <a class="rotate-btn">
+          <span class="rotate-btn-face">Entrez !</span>
+          <span class="rotate-btn-face-back">Gooo !</span>
+        </a>
       </div>
-    </header>
-    <!-- ------------------------------ Main ------------------------------ -->
-    <main>
-      <div class="boite1"></div>
-      <div class="boite2"></div>
-      <div class="boite3"></div>
-      <div class="boite4"></div>
-      <div class="boite5"></div>
-      <div class="boite6"></div>
-      <div class="boite7"></div>
-      <div class="boite8"></div>
     </main>
-
-    <!-- ------------------------------ Footer ------------------------------ -->
-    <!-- ------------------------------ Script ------------------------------ -->
-    <script src="./jq/jquerry.js"></script>
-    <script src="./js/app.js"></script>
   </body>
 </html>
