@@ -40,8 +40,10 @@ body {
   background:var(--navbar-bg-color);
   color:var(--navbar-color);
 }
-.navbar-logo {
+.navbar-logo a{
     font-family: 'Chewy', cursive;
+    color:var(--navbar-color);
+    text-decoration:none;
 }
 .navbar-links { 
   display:flex;  
@@ -57,9 +59,102 @@ body {
   display:none;
 }
 
+/*  ----------------------------------------------------------------------  reglage ecran smartphone
+----------------------------------------------------------------pour que le menu burger apparaissent */
+@media screen and (max-width:767.98px) {
+    .navbar-links { 
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    width:0;
+    height:calc(100vh - 65px);  
+    position:absolute;
+    top:65px;
+    right:0;     
+    background:var(--navbar-bg-color);     
+    transform: translateX(110%);
+    transition: all .5s ease-in-out;
+  }
+  .show-nav .navbar-links { 
+    width:100vw;    
+    transform: translateX(0);
+  } 
+  .navbar-link {    
+    transform: translateX(101%);
+    transition: all .5s ease-in-out;
+  }
+  .show-nav .navbar-link  {        
+    transform: translateX(0);    
+  }   
+  .navbar-link a {
+    display:block;
+    padding:1rem;
+    font-size:1.6rem;
+    color:var(--navbar-color);  
+    transition: all .4s ease-in-out;
+  }
+  .navbar-link > a:hover {
+    padding-left:2rem;
+    letter-spacing:5px;
+  }
+  /* ---------------------------------------------------------------------  Toggle menu */
+  .burger {
+    display:block;
+    position:relative;
+    padding:0;
+    width:45px;
+    height:45px;
+    border:none;
+    background:transparent;
+    cursor:pointer;
+  }
+  .bar {
+    display:block;    
+    width:45px;
+    height:4px;  
+    border-radius:3px;
+    background:var(--navbar-color); 
+    transition: all .5s ease-in-out;   
+  }
+  .bar::before, .bar::after {
+    content:"";
+    width:45px;
+    height:4px;
+    position:absolute; 
+    left:0;  
+    background:var(--navbar-color); 
+    border-radius:3px;    
+    transition: all .5s ease-in-out;
+  }
+  .bar::before {
+    transform:translateY(-12px)
+  }
+  .bar::after {
+    transform:translateY(12px)
+  }
+  .show-nav .bar {
+    width:0;
+    background:transparent;    
+  }
+  .show-nav .bar::before {
+    transform:rotate(45deg);
+  }
+  .show-nav .bar::after {
+    transform:rotate(-45deg);
+  }
+  .show-nav .first {      
+    transition: all 1s ease-out;
+  } 
+  .show-nav .second {      
+    transition: all 1.1s ease-out;
+  } 
+  .show-nav .third {      
+    transition: all 1.2s ease-out;
+  }
+}
 
-
-/*  Medium device - Bonus */
+/*  ----------------------------------------------------------------------  reglage grand ecran 
+----------------------------------------------------------pour que le menu burger n'apparaissent pas */
 @media screen and (min-width:768px) {
   .navbar-link > a::after {
     display:block;
@@ -73,49 +168,15 @@ body {
     width:100%;
   }
 }
-/* --------------------------------------------------------------------------------  Main Wall */
-.logo-wall{
+/* --------------------------------------------------------------------------------  Image principal */
+/* .logo-wall{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-.main-img {
+} }*/
+.img-pricipal {
     width: 100%;
 }
 /* --------------------------------------------------------------------------------  Rotate Btn */
-.rotate-btn {
-  display:inline-block;
-  width:150px;
-  height: 30px;
-  text-align:center;
-  transform-style:preserve-3d;
-  cursor:pointer;
-  transition:all .3s ease;
-  font-family: 'arial'
-}
-.rotate-btn .rotate-btn-face, .rotate-btn .rotate-btn-face-back {
-  position:absolute;
-  display:block;
-  border:1px solid #35495e;
-  transition:all .5s;
-  color:#35495e;
-  text-decoration:none;
-  width:150px;
-  height: 30px;
-  line-height:30px;
-  border-radius: 4px;
-}
-.rotate-btn .rotate-btn-face {
-  background-color: #ffde15;
-  transform:translateZ(15px);
-}
-.rotate-btn .rotate-btn-face-back {
-  background-color:#35495e;
-  color:#42b883;
-  border:1px solid #42b883;
-  transform:rotateX(-90deg) translateZ(15px);
-}
-.rotate-btn:hover {
-  transform:rotateX(90deg);
-}
+
