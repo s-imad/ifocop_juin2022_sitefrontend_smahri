@@ -186,6 +186,8 @@ article {
     align-items: center;
     justify-content: center;
 }
+/*  ----------------------------------------------------------------------  reglage grand ecran 
+---------------------------------------------pour que les article prennent tout l'espace sur grans ecran */
 @media screen and (min-width:768px) {
     article {
         /* display: flex;
@@ -209,7 +211,9 @@ article {
     border-radius: 20px;
     /* width: 20%; */
     margin: 10px;
+    padding: 15px;
     grid-area: a;
+    box-shadow: 0 0 20px #0000002e;
 }
 .titre-article h2 {
     font-family: 'Chewy', cursive;
@@ -235,6 +239,7 @@ article {
     margin: 10px;
     padding: 10px;
     grid-area: b;
+    box-shadow: 0 0 20px #0000002e;
 }
 /* --------------------------------------------------------------------------------   article 2 */
 .article-second {
@@ -249,6 +254,7 @@ article {
     margin: 10px;
     padding: 10px;
     grid-area: c;
+    box-shadow: 0 0 20px #0000002e;
 }
 .img-article2{
     width: 100%;
@@ -266,6 +272,7 @@ article {
     margin: 10px;
     padding: 10px;
     grid-area: d;
+    box-shadow: 0 0 20px #0000002e;
 }
 .img-article3{
     width: 100%;
@@ -284,4 +291,35 @@ article {
     margin: 10px;
     padding: 10px;
     grid-area: e;
+    box-shadow: 0 0 20px #0000002e;
+}
+/* --------------------------------------------------------------------------------   footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--navbar-bg-color);
+    color: var(--main-bg-color);
+    margin: 15px;
+    padding: 20px;
+    text-align: center;
+}
+footer div{
+    margin-top: 15px;
+}
+/*  ----------------------------------------------------------------------  reglage grand ecran 
+----------------------------------------------------------pour que le fooeter s'etale sur la largeur */
+@media screen and (min-width:768px) {
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        background-color: var(--navbar-bg-color);
+        margin-top: 10px;
+        padding: 20px;
+        color: var(--main-bg-color);
+    }
+}
+footer a {
+    text-decoration: none;
+    color: var(--main-bg-color);
 }
