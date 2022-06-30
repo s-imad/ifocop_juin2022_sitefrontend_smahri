@@ -45,7 +45,36 @@
       </button>
     </nav>
     <!-- ---------------------------------------------------------------------  Main -->
-    <main class="main-content"></main>
+    <main class="main-content">
+      <h1>contact</h1>
+      <div class="bloc-contact">
+        <h3>super promo</h3>
+        <p>
+          Envie de fraîcheur ? Découvrez nos délicieuses crèmes glacées et
+          aujourdhui 20% de remise si vous etes inscrit alors n'attendez plus.
+        </p>
+        <form action="">
+          <!-- entrer l'email -->
+          <input
+            placeholder="email"
+            type="email"
+            name="email"
+            id="email"
+          /><br />
+          <!-- entrer le nom -->
+          <input placeholder="nom" type="text" name="name" id="name" /><br />
+          <!-- entrer le prenom -->
+          <input
+            placeholder="prenom"
+            type="text"
+            name="surname"
+            id="surname"
+          /><br />
+          <!-- valider -->
+          <input type="submit" value="valider" id="bouton" />
+        </form>
+      </div>
+    </main>
     <!-- ---------------------------------------------------------------------  Footer -->
     <footer>
       <div class="propos">
@@ -74,9 +103,17 @@
       <div class="newsletter">
         <p>Inscrivez-vous à notre newsletter!</p>
         <form action="">
-          <label for="email">e-mail : </label>
-          <input type="email" name="email" id="email" />
-          <input type="submit" value="valider" id="bouton" />
+          <div class="input-newsletter">
+            <input
+              type="email"
+              class="input"
+              id="Email"
+              name="Email"
+              placeholder="votre e-mail"
+              autocomplete="off"
+            />
+            <input class="button--submit" value="S'inscrire" type="submit" />
+          </div>
         </form>
       </div>
       <div class="assist">

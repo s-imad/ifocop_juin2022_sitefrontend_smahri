@@ -310,6 +310,50 @@ footer div{
 .fa-brands{
     font-size: 2.5rem; 
 }
+/* -----------------------------------------------------------------------------   newsletter footer */
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* From uiverse.io by @alexruix */
+.input-newsletter {
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  min-height: 50px;
+  max-width: 150px;
+  padding: 0 1rem;
+  color: #fff;
+  font-size: 15px;
+  border: 1px solid var(--main-bg-color);
+  border-radius: 6px 0 0 6px;
+  background-color: transparent;
+}
+
+.button--submit {
+  min-height: 50px;
+  padding: .5em 1em;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  background-color: var(--main-bg-color);
+  color: var(--navbar-bg-color);
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color .3s ease-in-out;
+}
+
+.button--submit:hover {
+  background-color: var(--main-bg-color);
+}
+
+.input:focus, .input:focus-visible {
+  border-color: #3898EC;
+  outline: none;
+}
+
 
 /*  ----------------------------------------------------------------------  reglage grand ecran 
 ----------------------------------------------------------pour que le fooeter s'etale sur la largeur */
@@ -385,4 +429,19 @@ footer a {
         ". c c d d e e ." */
         ;
     }
+}
+
+/* --------------------------------------------------------------------------------   page contact */
+
+.bloc-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: var(--navbar-bg-color) solid 3px;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 0 20px #0000002e;
 }
