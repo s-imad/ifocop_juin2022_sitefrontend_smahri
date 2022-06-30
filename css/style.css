@@ -15,6 +15,10 @@
 ul {
   list-style:none;
 }
+h1 {
+    font-family: 'Chewy', cursive;
+    color: var(--navbar-bg-color);
+}
 
 /* --------------------------------------------------------------------------------  Basic style */
 body {
@@ -215,10 +219,6 @@ article {
     grid-area: a;
     box-shadow: 0 0 20px #0000002e;
 }
-.titre-article h2 {
-    font-family: 'Chewy', cursive;
-    color: var(--navbar-bg-color);
-}
 .titre-article h3 {
     font-family: 'rubik', sans-serif;
     color: var(--navbar-bg-color);
@@ -307,12 +307,16 @@ footer {
 footer div{
     margin-top: 15px;
 }
+.fa-brands{
+    font-size: 2.5rem; 
+}
+
 /*  ----------------------------------------------------------------------  reglage grand ecran 
 ----------------------------------------------------------pour que le fooeter s'etale sur la largeur */
 @media screen and (min-width:768px) {
     footer {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         background-color: var(--navbar-bg-color);
         margin-top: 10px;
         padding: 20px;
@@ -322,4 +326,63 @@ footer div{
 footer a {
     text-decoration: none;
     color: var(--main-bg-color);
+}
+
+/* --------------------------------------------------------------------------------   page parfums */
+#searchbar{
+     margin-left: 15%;
+     padding:15px;
+     border-radius: 10px;
+   }
+ 
+   input[type=text] {
+      width: 30%;
+      -webkit-transition: width 0.15s ease-in-out;
+      transition: width 0.15s ease-in-out;
+   }
+ 
+   
+   input[type=text]:focus {
+     width: 70%;
+   }
+ 
+  #list{
+    font-size:  1rem;
+    margin-left: 90px;
+   }
+ 
+.parfums{
+   display: list-item;    
+  }
+
+.bloc-parfum{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: var(--navbar-bg-color) solid 3px;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 0 20px #0000002e;
+  }
+.bloc-parfum:hover{
+    transform: scale(1.1);
+    background-color: aqua;
+    /* opacity: 1OO; */
+}
+/* --------------------------------------------------------------------disposition des parfums 
+---------------------------------------------------------------------------  sur les grand ecran */
+@media screen and (min-width:768px){
+    #list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* grid-template-rows: 0.5fr 0.2fr;
+        grid-template-areas: 
+        ". . a a a a . ."
+        ". b b b b b b ."
+        ". c c d d e e ." */
+        ;
+    }
 }
