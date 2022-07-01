@@ -39,6 +39,9 @@ body {
     font-family: "chewy";
     src: url(/police\ chewy/chewy.ttf);
 }
+a {
+  cursor: pointer;
+}
 /* --------------------------------------------------------------------------------  Navbar */
 .navbar {  
   display:flex;
@@ -484,6 +487,7 @@ footer a {
     width: 250px;
     color: var(--main-bg-color);
     background-color: var(--navbar-bg-color);
+    cursor: pointer;
 }
 #bouton:hover {
     transform: scale(1.3);
