@@ -263,7 +263,9 @@ article {
     padding: 10px;
     grid-area: c;
     box-shadow: 0 0 20px #0000002e;
+    height: 460px;
 }
+
 .img-article2{
     width: 100%;
 }
@@ -281,10 +283,10 @@ article {
     padding: 10px;
     grid-area: d;
     box-shadow: 0 0 20px #0000002e;
+    height: 460px;
 }
 .img-article3{
     width: 100%;
-    border-radius: 50%;
 }
 /* --------------------------------------------------------------------------------   article 4 */
 .article-fourth {
