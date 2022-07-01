@@ -19,6 +19,10 @@ h1 {
     font-family: 'Chewy', cursive;
     color: var(--navbar-bg-color);
 }
+p{
+    font-size:var(--font-size);
+    font-family: 'rubik', sans-serif;
+}
 
 /* --------------------------------------------------------------------------------  Basic style */
 body {
@@ -496,6 +500,16 @@ footer a {
     margin: 10px;
     padding: 10px;
     box-shadow: 0 0 20px #0000002e;
+}
+.bloc-histoire h2 {
+    font-family: 'Chewy', cursive;
+    color: var(--navbar-bg-color);
+}
+.bloc-histoire img {
+    margin-top: 50px;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
 }
 
 /* -----------------------------------------------------------------caroussel de la  page histoire */
