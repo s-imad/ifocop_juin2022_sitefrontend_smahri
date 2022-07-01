@@ -3,6 +3,7 @@ function toggleMenu() {
     const navbar = document.querySelector('.navbar');
     const burger = document.querySelector('.burger');
     burger.addEventListener('click', (e) => {
+        e.preventDefault()
         navbar.classList.toggle('show-nav');
     });
 }
@@ -36,6 +37,8 @@ function promoValider() {
         e.preventDefault()
         if (name.value == "" || surname.value == "" || email.value == "") {
             alert(`Veuillez remplir le formulaire correctement`);
+        } else {
+            alert(`Felicitaions ! Vous recevrez par mail votre coupon de reduction, à bientot!`)
         }
     })
 }

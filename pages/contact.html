@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta description="contacter nous ,Sweety cat Ice Cream." />
     <!--  fichier css -->
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <!--  Font Rubik Light 300 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,7 +29,7 @@
     <!-- ---------------------------------------------------------------------  Header  -->
     <nav class="navbar show-nav">
       <div class="navbar-logo">
-        <a href="./index.html">SweetyCat IceCream</a>
+        <a href="/index.html">SweetyCat IceCream</a>
       </div>
       <ul class="navbar-links">
         <li class="navbar-link first">
@@ -55,6 +55,7 @@
         </p>
         <form action="">
           <!-- entrer l'email -->
+          <label for="mail"></label>
           <input
             placeholder="email"
             type="email"
@@ -63,6 +64,7 @@
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
           /><br />
           <!-- entrer le nom -->
+          <label for="name"></label>
           <input
             placeholder="nom"
             type="text"
@@ -71,6 +73,7 @@
             pattern="[a-z]"
           /><br />
           <!-- entrer le prenom -->
+          <label for="surname"></label>
           <input
             placeholder="prenom"
             type="text"
@@ -81,6 +84,40 @@
           <!-- valider -->
           <input type="submit" value="valider" id="bouton" />
         </form>
+      </div>
+      <div class="bloc-contact2">
+        <h3>Ou nous trouver ?</h3>
+        <!-- --------------------------------------------------------------------------Google Map -->
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.2694268125783!2d2.3439225159490236!3d48.85307250903467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671e0ee60dc6f%3A0x68b031732a144b25!2sRue%20du%20Chat%20Qui%20P%C3%AAche%2C%2075005%20Paris!5e0!3m2!1sfr!2sfr!4v1656664044549!5m2!1sfr!2sfr"
+            width="400"
+            height="300"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="text-contact">
+          <span>
+            rue du chat qui pêche, 75005 PARIS<br />
+            01 . 06 . 77 . 99 . 32
+          </span>
+          <p>
+            Retrouvez nous dans l'emblematique et la celebre
+            <strong>Rue du Chat Qui Pêche</strong> dans le quartier de la
+            Sorbonne du 5e arrondissement de Paris.<br />
+            Elle doit son nom à l’enseigne d’un ancien commerce qui s’y
+            trouvait. Ce commerce de poissons était la propriété d'un chanoine
+            du nom de Dom Perlet dont le chat noir, d'une grande habileté, était
+            célèbre pour sa capacité à extraire des poissons de la Seine d'un
+            simple coup de patte.<br />
+            Aujourdhui, nos mignions petits chats ont repris le flambeau pour
+            vous servir les meilleurs glace de la capital.
+          </p>
+          <a href="/histoire.html">en savoir plus</a>
+        </div>
       </div>
     </main>
     <!-- ---------------------------------------------------------------------  Footer -->
@@ -97,13 +134,13 @@
         <h3>Réseau sociaux</h3>
         <p>
           Retrouvez nous sur :<br />
-          <a href="https://www.instagram.com/"
+          <a role="link" href="https://www.instagram.com/"
             ><i class="fa-brands fa-instagram"></i></a
           ><br />
-          <a href="https://fr-fr.facebook.com/"
+          <a role="link" href="https://fr-fr.facebook.com/"
             ><i class="fa-brands fa-facebook"></i
           ></a>
-          <a href="https://twitter.com/?lang=fr"
+          <a role="link" href="https://twitter.com/?lang=fr"
             ><i class="fa-brands fa-twitter"></i
           ></a>
         </p>
@@ -112,6 +149,7 @@
         <p>Inscrivez-vous à notre newsletter!</p>
         <form action="">
           <div class="input-newsletter">
+            <label for="mail"></label>
             <input
               type="email"
               class="input"
@@ -134,6 +172,6 @@
       </div>
     </footer>
     <!--  fichier javascript -->
-    <script src="./js/app.js"></script>
+    <script src="/js/app.js"></script>
   </body>
 </html>
