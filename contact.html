@@ -60,15 +60,23 @@
             type="email"
             name="email"
             id="email"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
           /><br />
           <!-- entrer le nom -->
-          <input placeholder="nom" type="text" name="name" id="name" /><br />
+          <input
+            placeholder="nom"
+            type="text"
+            name="name"
+            id="name"
+            pattern="[a-z]"
+          /><br />
           <!-- entrer le prenom -->
           <input
             placeholder="prenom"
             type="text"
             name="surname"
             id="surname"
+            pattern="[a-z]"
           /><br />
           <!-- valider -->
           <input type="submit" value="valider" id="bouton" />
@@ -111,6 +119,7 @@
               name="Email"
               placeholder="votre e-mail"
               autocomplete="off"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
             />
             <input class="button--submit" value="S'inscrire" type="submit" />
           </div>

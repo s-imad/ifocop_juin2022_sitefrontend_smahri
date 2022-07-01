@@ -8,6 +8,8 @@ function toggleMenu() {
 }
 toggleMenu();
 
+
+//page parfums
 // fonction qui permet de faire apparaitre les parfums en fonction de la barre de recherche
 function rechercheParfum() {
     let input = document.getElementById('searchbar').value
@@ -22,3 +24,19 @@ function rechercheParfum() {
         }
     }
 }
+
+// page contact
+// fonction qui permet d'envoyer une alert si on valide sans avoir rempli le formulaire
+function promoValider() {
+    const btn = document.getElementById('bouton');
+    const name = document.getElementById('name');
+    const surname = document.getElementById('surname');
+    const email = document.getElementById('email');
+    btn.addEventListener('click', (e) => {
+        e.preventDefault()
+        if (name.value == "" || surname.value == "" || email.value == "") {
+            alert(`Veuillez remplir le formulaire correctement`);
+        }
+    })
+}
+promoValider();

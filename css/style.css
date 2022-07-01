@@ -445,3 +445,18 @@ footer a {
     padding: 10px;
     box-shadow: 0 0 20px #0000002e;
 }
+.bloc-contact input {
+    width: 250px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 20px #0000002e;
+}
+#bouton {
+    width: 250px;
+    color: var(--main-bg-color);
+    background-color: var(--navbar-bg-color);
+}
+#bouton:hover {
+    transform: scale(1.3);
+}
