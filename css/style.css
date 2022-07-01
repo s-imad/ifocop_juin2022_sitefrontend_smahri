@@ -494,7 +494,7 @@ footer a {
     transition: 1.3s;
 }
 .bloc-contact2 p {
-    width: 400px;
+    width: 100%;
     padding: 5px;
     margin: 5px;
     border-radius: 10px 10px 10px 10px;
@@ -508,6 +508,10 @@ footer a {
     font-family: 'Chewy', cursive;
     color: var(--navbar-bg-color);
 }
+.map iframe{
+  width: 100%;
+}
+
 
 
 /* --------------------------------------------------------------------------------   page histoire */
