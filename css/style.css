@@ -263,7 +263,7 @@ article {
     padding: 10px;
     grid-area: c;
     box-shadow: 0 0 20px #0000002e;
-    height: 460px;
+    /* height: 460px; */
 }
 
 .img-article2{
@@ -283,7 +283,7 @@ article {
     padding: 10px;
     grid-area: d;
     box-shadow: 0 0 20px #0000002e;
-    height: 460px;
+    /* height: 460px; */
 }
 .img-article3{
     width: 100%;
