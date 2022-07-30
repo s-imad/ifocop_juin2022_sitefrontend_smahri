@@ -544,7 +544,7 @@ footer a {
 
 #slider { 
     width: 100%;
-    max-width: 1000px;
+    /* max-width: 1000px; */
     overflow: hidden;
     border: 10px solid var(--navbar-bg-color);
 }
